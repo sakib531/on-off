@@ -3,6 +3,7 @@ body {
     padding: 0;
     background: #130f40;
     font-family: Arial;
+    user-select: none;
 }
 
 .container {
@@ -52,8 +53,9 @@ body {
     outline: none;
     cursor: pointer;
     border-radius: 20px;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 2);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
     -webkit-appearance: none;
+    transition: 0.8s;
 }
 
 input[type="cheakbox"]::before {
@@ -65,5 +67,14 @@ input[type="cheakbox"]::before {
     top:0;
     left: 0;
     background: linear-gradient(#fff, #f2f2f2, #e6e6e6, #d9d9d9);
-    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    transition: .8s;
+}
+
+input:checked[type="cheakbox"] {
+    background: #387cfa;
+}
+
+input:checked[type="cheakbox"]::before {
+    left: 18px;
 }
